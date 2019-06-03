@@ -39,5 +39,6 @@ export default {
     font-size: .3rem;
     overflow: hidden;
     word-break:break-all;
+    overflow-y: scroll;
   }
 </style>

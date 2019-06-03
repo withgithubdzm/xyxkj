@@ -6,19 +6,34 @@ const path = require('path')
 
 module.exports = {
   dev: {
-
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
       '/api':{
-          target:'http://api.qingyunke.com',//当向这个api的时候
-          changeOrigin:true,
-          pathRewrite:{
-            "/api":""  //重写
-          }
+        target:'https://www.apiopen.top',//当向这个api的时候
+        changeOrigin:true,
+        secure:false,
+        pathRewrite:{
+            "^/api":"" //重写
+        }
+      },
+      '/apn':{
+        target:'https://api.apiopen.top',//当向这个api的时候
+        changeOrigin:true,
+        secure:false,
+        pathRewrite:{
+            "^/apn":"" //重写
+        }
+      },
+      '/apc':{
+        target:'http://api.qingyunke.com',//当向这个api的时候
+        changeOrigin:true,
+        pathRewrite:{
+            "^/apc":"" //重写
+        }
       }
-  },//代理
+    },//代理
 
 
     // Various Dev Server settings

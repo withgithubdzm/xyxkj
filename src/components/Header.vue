@@ -1,7 +1,7 @@
 <template>
     <div class="Header">
       <i class="iconfont icon-zhedie" @click="toggleFn"></i>
-      <span>看影吧</span>
+      <span>大杂汇</span>
     </div>
     
 </template>
@@ -21,11 +21,13 @@ export default {
 .Header{
   width: 100%;
   height: 1rem;
-  background: #fa541e;
+  /* background: #fa541e; */
+  background-image: linear-gradient(120deg,#ff5050,#d43d3d,#ff5050);
   text-align: center;
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 100;
 }
 .Header i{
   font-size: .6rem;

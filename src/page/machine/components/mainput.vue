@@ -20,7 +20,7 @@ export default {
   methods:{
     butmai(){
     let self = this
-    let url = 'api/api.php?key=free&appid=0&msg='+this.textar
+    let url = '/apc/api.php?key=free&appid=0&msg='+this.textar
     this.axios.get(url).then(response=>{
         if(this.textar){
             this.$store.state.content = response.data.content

@@ -1,14 +1,19 @@
 <template>
     <div class="Movie">
-      电影资讯
+      <movieNav></movieNav>
+      <router-view></router-view>
     </div>
     
 </template>
 
 <script>
+import axios from 'axios'
+import movieNav from "./components/movie-nav.vue"
 export default {
-  name: 'Movie'
- 
+  name: 'Movie',
+  components:{
+    movieNav
+  }
 }
 </script>
 
